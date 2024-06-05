@@ -1,5 +1,5 @@
 import React from "react";
-import { CounterProvider } from "./components/CounterProvider";
+import { CounterProvider } from "./components/organisms/CounterProvider";
 import Counter from "./components/View/CounterView";
 
 const CounterView: React.FC = () => {

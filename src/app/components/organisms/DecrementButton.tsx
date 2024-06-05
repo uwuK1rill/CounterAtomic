@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CounterContext } from "../CounterProvider";
+import { CounterContext } from "./CounterProvider";
 import Button from "../atoms/Button";
 
 const DecrementButton: React.FC = () => {
@@ -11,9 +11,7 @@ const DecrementButton: React.FC = () => {
 
   const { decrement } = context;
 
-  return (
-    <Button onClick={decrement}>Decrement</Button>
-  );
+  return <Button onClick={decrement}>Decrement</Button>;
 };
 
 export default DecrementButton;

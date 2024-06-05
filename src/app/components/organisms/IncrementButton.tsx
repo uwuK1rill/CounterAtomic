@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CounterContext } from "../CounterProvider";
+import { CounterContext } from "./CounterProvider";
 import Button from "../atoms/Button";
 
 const IncrementButton: React.FC = () => {
@@ -11,9 +11,7 @@ const IncrementButton: React.FC = () => {
 
   const { increment } = context;
 
-  return (
-    <Button onClick={increment}>Increment </Button>
-  );
+  return <Button onClick={increment}>Increment </Button>;
 };
 
 export default IncrementButton;
