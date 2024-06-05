@@ -12,7 +12,7 @@ const IncrementButton: React.FC = () => {
   const { increment } = context;
 
   return (
-    <Button onClick={increment}>Increment</Button>
+    <Button onClick={increment}>Increment </Button>
   );
 };
 

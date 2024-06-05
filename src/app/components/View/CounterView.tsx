@@ -2,8 +2,8 @@
 
 import React, { useContext } from "react";
 import { CounterContext } from "../CounterProvider";
-import IncrementButton from "./IncrementButton";
-import DecrementButton from "./DecrementButton";
+import IncrementButton from "../organisms/IncrementButton";
+import DecrementButton from "../organisms/DecrementButton";
 import Text from "../atoms/Text";
 import styles from "../atoms/Button.module.css";
 
