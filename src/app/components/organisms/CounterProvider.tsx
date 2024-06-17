@@ -1,6 +1,5 @@
 "use client";
-
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useMemo } from "react";
 
 interface CounterContextType {
   count: number;
@@ -21,13 +20,19 @@ export const CounterProvider: React.FC<{ initialValue: number }> = ({
 }) => {
   const [count, setCount] = useState(initialValue);
 
-  const increment = () => {
-    setCount((prevCount) => prevCount + 1);
-  };
+  const increment = useMemo(() => {
+    console.log("Создана функция increment ");
+    return () => {
+      setCount((prevCount) => prevCount + 1);
+    };
+  }, []);
 
-  const decrement = () => {
-    setCount((prevCount) => prevCount - 1);
-  };
+  const decrement = useMemo(() => {
+    console.log("Создана функция decrement ");
+    return () => {
+      setCount((prevCount) => prevCount - 1);
+    };
+  }, []);
 
   return (
     <CounterContext.Provider value={{ count, increment, decrement }}>
